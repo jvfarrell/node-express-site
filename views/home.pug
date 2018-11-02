@@ -1,0 +1,117 @@
+doctype html
+html
+  head
+    title Victor Farrell - Developer
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    style.
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+      .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+      .fa-anchor,.fa-coffee {font-size:200px}
+    link(rel='shortcut icon', href='/images/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
+  body
+    // Navbar
+    .w3-top
+      .w3-bar.w3-blue.w3-card-2.w3-left-align.w3-large
+        a.w3-bar-item.w3-button.w3-hide-medium.w3-hide-large.w3-right.w3-padding-large.w3-hover-white.w3-large.w3-blue(href='javascript:void(0);', onclick='myFunction()', title='Toggle Navigation Menu')
+          i.fa.fa-bars
+        a.w3-bar-item.w3-button.w3-padding-large.w3-white(href='/home/') Home
+        a.w3-bar-item.w3-button.w3-hide-small.w3-padding-large.w3-hover-white(href='/resume/') Resume
+        a.w3-bar-item.w3-button.w3-hide-small.w3-padding-large.w3-hover-white(href='/summoner/') Summoner Lookup
+        a.w3-bar-item.w3-button.w3-hide-small.w3-padding-large.w3-hover-white(href='/quote/random') Quote Generator
+        a.w3-bar-item.w3-button.w3-hide-small.w3-padding-large.w3-hover-white(href='/videos/') My Videos
+      // Navbar on small screens
+      #navDemo.w3-bar-block.w3-white.w3-hide.w3-hide-large.w3-hide-medium.w3-large
+        a.w3-bar-item.w3-button.w3-padding-large(href='/resume/') Resume
+        a.w3-bar-item.w3-button.w3-padding-large(href='/summoner/') Summoner Lookup
+        a.w3-bar-item.w3-button.w3-padding-large(href='/quote/random') Quote Generator
+        a.w3-bar-item.w3-button.w3-padding-large(href='/videos/') My Videos
+    // Header
+    header.w3-container.w3-blue.w3-center(style='padding:128px 16px')
+      h1.w3-margin.w3-jumbo VICTOR FARRELL
+      p.w3-xlarge Welcome to my site!
+      form(method='get', action='#about')
+        button.w3-button.w3-black.w3-padding-large.w3-large.w3-margin-top(type='submit') Get Started
+      meta(name='description', content='Personal website for Victor Farrell.  Developer and Consultant.')
+      meta(name='keywords', content='Victor Farrell,Developer,Consultant,Ventera,John Victor Farrell')
+      meta(name='author', content='J Victor Farrell')
+    // First Grid
+    #about.w3-row-padding.w3-padding-64.w3-container
+      .w3-content
+        .w3-twothird
+          h1 About Me
+          h5.w3-padding-32
+            | I am a Hip-Hop dancing snowboarder with a love for lacrosse, soccer, and video games. You can usually find me playing League of Legends or out and about exploring Northern Virginia with my girlfriend.
+          p.w3-text-grey
+            | I graduated from the College of William & Mary in 2014 with my Bachelors in Computer Science and a minor in Process Management and Consulting.
+            | My first 2 years out of school I worked down in Richmond VA at Genworth Financial in a development program trying out different technical roles.
+            | In August of 2016 I moved up to Arlington VA and started working for Ventera as a technical Consultant.  I worked on the FNS contract for several months and have recently transitioned to the CMS contract.
+        .w3-third.w3-center
+          i.fa.fa-gamepad.w3-padding-64.w3-text-blue(style='font-size:200px')
+    // Second Grid
+    .w3-row-padding.w3-light-grey.w3-padding-64.w3-container
+      .w3-content
+        .w3-third.w3-center
+          i.fa.fa-headphones.w3-padding-64.w3-text-blue.w3-margin-right(style='font-size:200px')
+        .w3-twothird
+          h1 About this site
+          h5.w3-padding-32
+            | This site contains several of my personal projects to show off some things I've worked on.
+          p.w3-text-grey
+            | Check out each link to see what that project does.  I'll continually update them.
+            | If you want to know more about me personally check out my social media below and check out my YouTube channel.
+          p.w3-text-grey
+            b Quote Generator:
+            |  I love to collect things.  Since I was little I collected geodes from the Outer Banks.
+            |         Over the past several years I've collected and written down my favorite quotes.  The quote generator will randomly select
+            |         one of my favorite quotes that I have collected each time you refresh the page or click on the quote block.
+            |         Some of them contain vulgar language, if this offends you I apologize but I do hope you enjoy them.
+          p.w3-text-grey
+            b Summoner Lookup:
+            |  I love video games.  I've grown up playing Halo, CoD, Gears of War, etc with my Dad and brothers.
+            |         League of Legends is one of my current favorites, so I decided to make a League of Legends Profiler. It currently
+            |         displays some basic stats about your top 8 ranked champions. It pulls all the data from the Riot API.
+            |         I'll be working on this one a lot to add more features and fix bugs continuously. If you want to see an example
+            |         and don't know a Summoner name, look me (Malibu Schnapps) up!
+    #quote.w3-container.w3-black.w3-center.w3-opacity.w3-padding-64(onclick='window.location.reload(true)')
+      h1.w3-margin.w3-xlarge
+        b Quote Generator:
+        br
+        h1.w3-margin.w3-xlarge= quoteText
+        h3.w3-margin.w3-medium= source
+      br
+      // <h1 class="w3-margin w3-xlarge">Quote2: <p>You know, sometimes all you need is twenty seconds of insane courage.  Just literally twenty seconds of just embarrassing bravery. And I promise you, something great will come of it. -Matt Damon</p></h1>
+    .w3-row-padding.w3-padding-64.w3-container
+    // Footer
+    footer.w3-container.w3-padding-64.w3-center.w3-opacity
+      .w3-xlarge.w3-padding-32
+        a(href='https://www.facebook.com/victor.farrell.5')
+          i.fa.fa-facebook-official.w3-hover-opacity
+        a(href='https://www.instagram.com/relaxbro12/')
+          i.fa.fa-instagram.w3-hover-opacity
+        a(href='https://www.snapchat.com/add/malibuvic')
+          i.fa.fa-snapchat.w3-hover-opacity
+        a(href='https://www.youtube.com/channel/UCAjhAVPjPZTmWSwwRhcPVdQ')
+          i.fa.fa-youtube.w3-hover-opacity
+        a(href='https://www.linkedin.com/in/victor-farrell-7475b24b/')
+          i.fa.fa-linkedin.w3-hover-opacity
+        a(href='https://github.com/jvfarrell')
+          i.fa.fa-github.w3-hover-opacity
+      p
+        | Powered by 
+        a(href='https://www.w3schools.com/w3css/default.asp', target='_blank') w3.css
+    script.
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      } else {
+      x.className = x.className.replace(" w3-show", "");
+      }
+      }
