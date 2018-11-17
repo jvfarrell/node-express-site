@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import routes from './src/routes/quoteRoutes';
+import creds from './src/resources/creds';
+//const creds = require('.src/resources/creds');
 
 const app = express();
 const PORT = 3001;
@@ -9,7 +11,7 @@ const PORT = 3001;
 // mongoose connection
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  'mongodb://localhost/Quotedb',
+  'mongodb://'+creds.USERNAME+':'+creds.PASS+'@ds163836.mlab.com:63836/quote_db',
   {
     useMongoClient: true,
   },
