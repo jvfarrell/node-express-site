@@ -32,3 +32,5 @@ node_modules
 # Ignore SonarQube reports.
 /.scannerwork
 /.sonarlint
+
+package-lock.json
